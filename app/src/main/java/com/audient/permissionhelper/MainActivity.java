@@ -22,15 +22,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_test:
-                PermissionHelper.requestPermissions(this, () -> {
-                    // on granted
-                    Toast.makeText(MainActivity.this, "onGranted", Toast.LENGTH_SHORT).show();
 
-                }, () -> {
-                    // on denied
-                    Toast.makeText(MainActivity.this, "onDenied", Toast.LENGTH_SHORT).show();
+PermissionHelper.requestPermissions(this, () -> {
+    // on granted
+    Toast.makeText(MainActivity.this, "onGranted", Toast.LENGTH_SHORT).show();
 
-                }, Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+}, () -> {
+    // on denied
+    Toast.makeText(MainActivity.this, "onDenied", Toast.LENGTH_SHORT).show();
+
+}, Manifest.permission.READ_CONTACTS, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
                 break;
         }
     }
