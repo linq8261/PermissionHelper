@@ -59,7 +59,7 @@ public class PermissionHelper extends Fragment {
         checkPermissions(activity, permissions);
 
         if (isGranted(activity, permissions)) {
-            if (deniedListener != null) deniedListener.onDenied();
+            if (grantedListener != null) grantedListener.onGranted();
             return;
         }
 
@@ -127,8 +127,7 @@ public class PermissionHelper extends Fragment {
     private static List<String> getRegisteredInManifestPermissions(Activity activity) {
         List<String> list = new ArrayList<>();
         try {
-            PackageInfo packageInfo = activity.getPackageManager()
-                    .getPackageInfo(activity.getPackageName(), PackageManager.GET_PERMISSIONS);
+            PackageInfo packageInfo = activity.getPackageManager().getPackageInfo(activity.getPackageName(), PackageManager.GET_PERMISSIONS);
             String[] permissions = packageInfo.requestedPermissions;
             if (permissions != null) {
                 list.addAll(Arrays.asList(permissions));
