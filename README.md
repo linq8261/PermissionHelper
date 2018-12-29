@@ -14,7 +14,7 @@ allprojects {
 
 // 在 module 根目录的 build.gradle 中添加：
 dependencies {
-    implementation 'com.audient:permission_helper:1.0.0'
+    implementation 'com.audient:permission_helper:1.0.1'
 }
 ```
 

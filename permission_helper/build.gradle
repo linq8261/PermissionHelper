@@ -30,7 +30,7 @@ ext {
     GITHUB_REPO_PATH = "D:\\repos"
     PUBLISH_GROUP_ID = 'com.audient'
     PUBLISH_ARTIFACT_ID = 'permission_helper'
-    PUBLISH_VERSION = '1.0.0'
+    PUBLISH_VERSION = '1.0.1'
 }
 
 uploadArchives {
